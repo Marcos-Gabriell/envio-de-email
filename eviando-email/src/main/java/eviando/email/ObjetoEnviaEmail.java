@@ -1,13 +1,34 @@
 package eviando.email;
 
-import java.net.Authenticator;
-import java.net.PasswordAuthentication;
 import java.util.Properties;
+
+
+import javax.mail.Address;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
 
 public class ObjetoEnviaEmail {
 
-	private String userName = "***********";
-	private String password = "******";
+	private String userName = "***********************************************************************************************";
+	private String password = "************************************************************************";
+	
+	private String listDestinatarios = "";
+	private String nomeRemetente = "";
+	private String assuntoEmail = "";
+	private String textoEmail = "";
+	
+	public ObjetoEnviaEmail(String listDestinatarios, String nomeRemetente, String assuntoEmail, String textoEmail) {
+		this.listDestinatarios = listDestinatarios;
+		this.nomeRemetente = nomeRemetente;
+		this.assuntoEmail = assuntoEmail;
+		this.textoEmail = textoEmail;
+	}
 
 	public void eviarEmail() throws Exception {
 		Properties properties = new Properties();
@@ -28,13 +49,13 @@ public class ObjetoEnviaEmail {
 			}
 		});
 
-		Address[] toUser = InternetAddress.parse("marcosgabriel79355@gmail.com, mgg334466@gmail.com");
+		Address[] toUser = InternetAddress.parse(listDestinatarios);
 
 		Message message = new MimeMessage(session);
-		message.setFrom(new InternetAddress(userName, "Marcos Gabriel"));
+		message.setFrom(new InternetAddress(userName, nomeRemetente));
 		message.setRecipients(Message.RecipientType.TO, toUser);
-		message.setSubject("Chegou email enviado com java");
-		message.setText("Olá, testando");
+		message.setSubject(assuntoEmail);
+		message.setText(textoEmail);
 
 		Transport.send(message);
 	}
