@@ -1,6 +1,6 @@
 package eviando.email;
 
-import java.net.InterfaceAddress;
+
 import java.util.Properties;
 
 import javax.mail.Address;
@@ -19,8 +19,8 @@ import org.junit.Test;
  */
 public class AppTest {
 
-	private String userName ="***************************************************************************************************";
-	private String password = "***********************************************************************";
+	private String userName ="marcosgabrielemail3@gmail.com";
+	private String password = "qerbnqvxquoswbjs";
 
 	@Test
 	public void testeEmail() {
@@ -46,12 +46,15 @@ public class AppTest {
 		Address[] toUser = InternetAddress.parse("marcosgabriel79355@gmail.com, mgg334466@gmail.com, maraqueiroz1975@gmail.com, daniellneto@yahoo.com.br");
 		
 		Message message =  new MimeMessage(session);
-		message.setFrom(new InternetAddress(userName));
+		message.setFrom(new InternetAddress(userName, "Marcos Gabriel"));
 		message.setRecipients(Message.RecipientType.TO, toUser);
 		message.setSubject("Chegou email enviado com java");
 		message.setText("Olá, testando");
 		
 		Transport.send(message);
+		
+		
+		Thread.sleep(5000);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
