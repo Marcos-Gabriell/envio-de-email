@@ -1,6 +1,6 @@
 # Projeto de Estudos e Treinamento com a API JavaMail Com JAVA
 
-Este é o repositório do projeto desenvolvido para estudos com a API JavaMail, com foco no envio de e-mails utilizando a linguagem de programação Java.
+Este é o repositório do projeto desenvolvido para estudos com a API JavaMail juntamente com JAVA, com foco no envio de e-mails utilizando a linguagem de programação Java.
 
 ## Descrição
 
