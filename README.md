@@ -12,6 +12,7 @@ O projeto é uma aplicação que explora o uso da API JavaMail para enviar e-mai
 
 ## Funcionalidades
 
+
 - Envio de e-mails utilizando a API JavaMail.
 - Anexo de arquivos aos e-mails.
 - Personalização de conteúdo e assunto dos e-mails.
