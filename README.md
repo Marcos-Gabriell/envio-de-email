@@ -3,7 +3,6 @@
 
 Este é o repositório do projeto desenvolvido para estudos com a API JavaMail juntamente com JAVA, com foco no envio de e-mails utilizando a linguagem de programação Java.
 
-
 ## Descrição
 
 O projeto é uma aplicação que explora o uso da API JavaMail para enviar e-mails por meio de um programa Java. Ele foi criado com o intuito de aprofundar o entendimento sobre como interagir com serviços de e-mail por meio de código.
